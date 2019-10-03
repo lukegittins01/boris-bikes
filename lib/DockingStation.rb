@@ -15,6 +15,7 @@ attr_accessor :capacity
 
   def release_bike
     fail 'No bikes available' if @bikes.empty?
+    fail 'bike is broken' if @broken == true
     @bikes.pop
   end
 
